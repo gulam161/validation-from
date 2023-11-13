@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 98.5%;
+}
+
+.main_div {
+  @apply fixed top-0 inset-0 bg-[#efedee] flex justify-center items-center;
+}
+.card_div {
+  @apply w-2/6 max-w-[60%] rounded-lg overflow-hidden absolute transition-all duration-300 bg-white xl:w-2/5 lg:w-2/4 md:w-3/4 sm:w-auto;
+}
+.min_div {
+  @apply pt-10 px-8 pb-6 bg-white transition-all duration-500 opacity-100 transform translate-y-0 delay-100;
+}
+
+.input-button {
+  @apply py-2 px-6 outline-none uppercase border-none  text-white rounded-md bg-[#8c7569] transition font-sans hover:bg-[#55311c];
+}
+
+.input-label {
+  @apply text-xs uppercase font-semibold tracking-wider text-[#8c7569] transition duration-300 ease-in-out;
+}
+.input-block {
+  @apply flex flex-col pt-3 px-3 pb-2 border border-solid border-gray-300 rounded-md mb-5 transition duration-300;
+}
+.input-block input {
+  @apply outline-none border-none pt-1 text-sm placeholder:text-gray-400 opacity-100;
+}
+
+.input-block:focus-within {
+  border-color: #8c7569;
+}
+.input-block:focus-within .input-label {
+  color: rgba(140, 117, 105, 0.8);
+}
